@@ -1,0 +1,32 @@
+<div>
+    <div>
+      <table>
+        <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Genero</th>
+          <th>Criador</th>
+          <th>Tempo</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataList; let idx = index;" id="list-item-{{idx}}">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div>
+                    <i class="play material-icons mr-4">play_circle_outline</i>
+                    <span></span>
+                    </div>
+                    </td>
+                <td><button class="icon-only mx-2">
+                    <i class="delete material-icons">delete</i>
+                </button></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

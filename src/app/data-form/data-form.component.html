@@ -1,0 +1,23 @@
+<div>
+    <section>
+        <input type="text" required placeholder="Nome" [(ngModel)]="nome"/>
+        <input type="text" required placeholder="Genero" [(ngModel)]="genero"/>
+        <input type="text" required placeholder="Criador" [(ngModel)]="criador"/>
+        <form>
+          <label>
+            <input type="radio" name="tipo" value="Livro" [(ngModel)]="tipo">Livro
+          </label>
+         <label>
+             <input type="radio" name="tipo" value="Musica" [(ngModel)]="tipo">Música
+         </label>
+        </form>
+        <input 
+        type="number"
+        [(ngModel)]="tempoTotal"
+        *ngIf="tipo === 'Musica'"
+        />
+    </section>
+    <section>
+        <button (click)="adicionarItem()">Add</button>
+    </section>
+</div>
