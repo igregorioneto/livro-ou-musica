@@ -1,4 +1,4 @@
-<div>
+<div class="data-list">
     <div>
       <table>
         <thead>
@@ -10,20 +10,18 @@
           <th>Ações</th>
         </tr>
         </thead>
-        <tbody>
-            <tr *ngFor="let item of dataList; let idx = index;" id="list-item-{{idx}}">
-                <td></td>
-                <td></td>
-                <td></td>
+        <tbody class="data-list-tbody">
+            <tr *ngFor="let item of dataList; let idx = index;" id="list-item{{idx}}" class="data-list-tr">
+                <td>{{item.nome}}</td>
+                <td>{{item.genero}}</td>
+                <td>{{item.criador}}</td>
                 <td>
                     <div>
-                    <i class="play material-icons mr-4">play_circle_outline</i>
-                    <span></span>
+                    <span>
+                      {{item.tempoTotal != undefined && item.tempoTotal >= 0 ? item.tempoTotal : '--:--'}}</span>
                     </div>
                     </td>
-                <td><button class="icon-only mx-2">
-                    <i class="delete material-icons">delete</i>
-                </button></td>
+                <td><button class="button-delete" (click)="deletarItem(item)">-</button></td>
             </tr>
         </tbody>
       </table>

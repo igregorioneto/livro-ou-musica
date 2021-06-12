@@ -1,0 +1,29 @@
+@import '../../assets/sass/_mixins'
+.data-form input[type='text']
+    @include auto()
+
+.data-form input[type='number']
+    @include auto()
+
+.data-form
+    text-align: center
+    
+.section-form input[type='text']
+    @include input()
+
+.section-form input[type='number']
+    @include input()
+    margin-bottom: 15px
+
+.section-form input[type='radio']
+    margin: 15px 0px 15px 10px
+    font-size: 20px
+
+.section-form label
+    font-size: 20px
+
+.section-button button 
+    @include button()
+    
+
+

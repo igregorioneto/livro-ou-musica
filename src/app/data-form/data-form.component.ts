@@ -27,7 +27,10 @@ export class DataFormComponent implements OnInit {
         criador: this.criador,
         tipo: this.tipo
       }
+
       this.addItem.emit(item)
+
+      this.limparCampos()
     } else if(this.tipo == 'Musica') {
       item = {
         nome: this.nome,
@@ -36,8 +39,19 @@ export class DataFormComponent implements OnInit {
         tipo: this.tipo,
         tempoTotal: this.tempoTotal
       }
+
       this.addItem.emit(item)
+      
+      this.limparCampos()
     }
+  }
+
+  limparCampos() {
+    this.nome = ''
+    this.genero = ''
+    this.criador = ''
+    this.tipo = ''
+    this.tempoTotal = 0
   }
 
 }

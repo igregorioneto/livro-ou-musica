@@ -1,5 +1,5 @@
-<div>
-    <section>
+<div class="data-form">
+    <section class="section-form">
         <input type="text" required placeholder="Nome" [(ngModel)]="nome"/>
         <input type="text" required placeholder="Genero" [(ngModel)]="genero"/>
         <input type="text" required placeholder="Criador" [(ngModel)]="criador"/>
@@ -17,7 +17,7 @@
         *ngIf="tipo === 'Musica'"
         />
     </section>
-    <section>
+    <section class="section-button">
         <button (click)="adicionarItem()">Add</button>
     </section>
 </div>

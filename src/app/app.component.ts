@@ -19,10 +19,18 @@ export class AppComponent {
   }
 
   addItem(item: Item) {
-    console.log(item)
+    if(item.tipo == this.Livro) {
+      this.itensLivro.push(item)
+    } else if(item.tipo == this.Musica) {
+      this.itensMusica.push(item)
+    }
   }
 
   deleteItem(item: Item) {
-    console.log(item)
+    if(item.tipo == this.Livro) {
+      this.itensLivro.splice(this.itensLivro.indexOf(item),1)
+    } else if(item.tipo == this.Musica) {
+      this.itensMusica.splice(this.itensMusica.indexOf(item),1)
+    }
   }
 }
