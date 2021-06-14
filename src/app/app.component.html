@@ -1,16 +1,1 @@
-<div class="home">
-  <h1>Cadastro de Livros&Música</h1>
-</div>
-<div class="container-form">
-  <data-form (addItem)="addItem($event)"></data-form>
-</div>
-<div class="container-list">
-  <div class="book-list">
-    <h3>Listagem de Livros</h3>
-    <data-list [dataList]="itensLivro" [dataType]="Livro" (deleteItem)="deleteItem($event)"></data-list>
-  </div>
-  <div class="song-list">
-    <h3>Listagem de Músicas</h3>
-    <data-list [dataList]="itensMusica" [dataType]="Musica" (deleteItem)="deleteItem($event)"></data-list>
-  </div>
-</div>
+<router-outlet></router-outlet>
