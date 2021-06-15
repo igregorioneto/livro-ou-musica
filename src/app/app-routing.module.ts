@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    canActivate: [AuthenticationGuard]
+    // canActivate: [AuthenticationGuard]
   },
   {
     path: '',

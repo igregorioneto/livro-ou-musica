@@ -1,23 +1,28 @@
 <div class="data-form">
     <section class="section-form">
-        <input type="text" required placeholder="Nome" [(ngModel)]="nome"/>
-        <input type="text" required placeholder="Genero" [(ngModel)]="genero"/>
-        <input type="text" required placeholder="Criador" [(ngModel)]="criador"/>
-        <form>
-          <label>
-            <input type="radio" name="tipo" value="Livro" [(ngModel)]="tipo">Livro
-          </label>
-         <label>
-             <input type="radio" name="tipo" value="Musica" [(ngModel)]="tipo">Música
-         </label>
+        <form [formGroup]="cadastro" (ngSubmit)="adicionarItem()">
+            <app-inputs type="text" 
+                        placeholder="Nome do Livro / Música" 
+                        [formGroup]="cadastro">
+            </app-inputs>
+            <input type="text" required placeholder="Genero" [(ngModel)]="cadastro"/>
+            <input type="text" required placeholder="Criador" [(ngModel)]="cadastro"/>
+            <form>
+            <label>
+                <input type="radio" name="tipo" value="Livro" [(ngModel)]="tipo">Livro
+            </label>
+            <label>
+                <input type="radio" name="tipo" value="Musica" [(ngModel)]="tipo">Música
+            </label>
+            </form>
+            <input 
+            type="number"
+            [(ngModel)]="tempoTotal"
+            *ngIf="tipo === 'Musica'"
+            />
         </form>
-        <input 
-        type="number"
-        [(ngModel)]="tempoTotal"
-        *ngIf="tipo === 'Musica'"
-        />
     </section>
     <section class="section-button">
-        <button (click)="adicionarItem()">Add</button>
+        <button>Add</button>
     </section>
 </div>
